@@ -88,14 +88,14 @@ def show_create_account():
 
 def show_main():
     st.header(f"Welcome, {st.session_state['username']}")
-
-    if st.button('Log Climb'):
+    col1, col2, col3 = st.columns(3)
+    if col1.button('Log Climb'):
         st.session_state['page'] = 'log_climb'
         st.rerun()
-    if st.button('View Eiffel Tower Info'):
+    if col2.button('Eiffel Tower Info'):
         st.session_state['page'] = 'eiffel_tower'
         st.rerun()
-    if st.button('Logout'):
+    if col3.button('Logout'):
         st.session_state['logged_in'] = False
         st.session_state['username'] = ""
         st.session_state['page'] = 'login'
