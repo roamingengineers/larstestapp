@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stair Climbing Tracker</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 20px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainContainer"> <button id="logClimbButton">Log Climb</button> <button id="eiffelTower">View Eiffel Tower
+            Info</button>
+        <div id="totalStats">
+            <p>Total Flights Climbed: <span id="totalFlights">0</span></p>
+            <p>Total Time: <span id="totalTime">00</span>:<span id="totalSeconds">00</span></p>
+            <p>Progress: <span id="progressPercent">0%</span></p>
+            <div class="progress-bar" id="progressBar"></div>
+            <p>Remaining Flights: <span id="remainingFlights">1200</span></p>
+        </div>
+    </div>
+    <div id="logClimbContainer" class="hidden">
+        <form id="stairForm"> <label for="flights">Flights of Stairs:</label> <input type="number" id="flights"
+                name="flights" min="1" required> <label for="time">Time (MM:SS):</label> <input type="text" id="time"
+                name="time" pattern="\d{2}:\d{2}" required> <button type="submit">Submit</button> </form> <button
+            id="backButton">Back</button>
+    </div>
+    <div id="eiffelInfoContainer" class="hidden">
+        <p>Eiffel Tower Info: The Eiffel Tower has approximately 1200 steps to the top.</p> <button
+            id="backToMainButton">Back to Main</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
