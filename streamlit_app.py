@@ -4,9 +4,7 @@ import pandas as pd
 import streamlit as st
 
 """
-# Welcome
-
- :heart:.
+# Welcome or some shit! :heart:
 
 """
 
