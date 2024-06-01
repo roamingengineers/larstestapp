@@ -2,9 +2,12 @@ import streamlit as st
 import json
 import os
 
+
+st.set_page_config(page_title="Stair Climbing Tracker", page_icon="🗼")
 # Path to the JSON file in the repository
 USER_DATA_FILE = "userdata.json" 
 
+st.title("Stair Climbing Tracker 🗼")
 # Initialize session state variables
 if 'logged_in' not in st.session_state:
     st.session_state['logged_in'] = False
@@ -40,7 +43,7 @@ def main():
         show_create_account()
 
 def show_login():
-    st.title("Login")
+    st.header("Login")
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
     if st.button("Login"):
@@ -57,7 +60,7 @@ def show_login():
         st.rerun()
 
 def show_create_account():
-    st.title("Create a New Account")
+    st.header("Create a New Account")
     new_username = st.text_input("New Username")
     new_password = st.text_input("New Password", type="password")
     confirm_password = st.text_input("Confirm Password", type="password")
@@ -84,7 +87,7 @@ def show_create_account():
     st.button("Back to Login", on_click=lambda: change_page('login'))
 
 def show_main():
-    st.title(f"Welcome, {st.session_state['username']}")
+    st.header(f"Welcome, {st.session_state['username']}")
 
     if st.button('Log Climb'):
         st.session_state['page'] = 'log_climb'
