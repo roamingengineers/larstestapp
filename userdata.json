@@ -1,0 +1,20 @@
+{
+    "user1": {
+        "password": "password123",
+        "total_flights": 10,
+        "total_time_minutes": 20,
+        "total_time_seconds": 30
+    },
+    "user2": {
+        "password": "mypassword",
+        "total_flights": 5,
+        "total_time_minutes": 10,
+        "total_time_seconds": 15
+    },
+    "test": {
+        "password": "test",
+        "total_flights": 133,
+        "total_time_minutes": 15,
+        "total_time_seconds": 30
+    }
+}

@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.write("home page test")
+#st.write("home page test")
 
 
 import streamlit as st
